@@ -92,9 +92,10 @@ namespace FitnessTracker2._0
             // 
             // remarks
             // 
-            this.remarks.Location = new System.Drawing.Point(219, 137);
+            this.remarks.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remarks.Location = new System.Drawing.Point(219, 130);
             this.remarks.Name = "remarks";
-            this.remarks.Size = new System.Drawing.Size(100, 22);
+            this.remarks.Size = new System.Drawing.Size(100, 31);
             this.remarks.TabIndex = 7;
             // 
             // serving_no
@@ -106,10 +107,11 @@ namespace FitnessTracker2._0
             // 
             // diet
             // 
+            this.diet.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diet.FormattingEnabled = true;
             this.diet.Location = new System.Drawing.Point(219, 46);
             this.diet.Name = "diet";
-            this.diet.Size = new System.Drawing.Size(100, 24);
+            this.diet.Size = new System.Drawing.Size(100, 32);
             this.diet.TabIndex = 5;
             // 
             // label5
@@ -197,42 +199,47 @@ namespace FitnessTracker2._0
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(13, 189);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(488, 242);
+            this.panel3.Size = new System.Drawing.Size(488, 245);
             this.panel3.TabIndex = 2;
             // 
             // cal_in
             // 
+            this.cal_in.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cal_in.Location = new System.Drawing.Point(219, 206);
             this.cal_in.Name = "cal_in";
-            this.cal_in.Size = new System.Drawing.Size(100, 22);
+            this.cal_in.Size = new System.Drawing.Size(100, 31);
             this.cal_in.TabIndex = 12;
             // 
             // fat_in
             // 
+            this.fat_in.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fat_in.Location = new System.Drawing.Point(219, 166);
             this.fat_in.Name = "fat_in";
-            this.fat_in.Size = new System.Drawing.Size(100, 22);
+            this.fat_in.Size = new System.Drawing.Size(100, 31);
             this.fat_in.TabIndex = 10;
             // 
             // vitamin_in
             // 
+            this.vitamin_in.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vitamin_in.Location = new System.Drawing.Point(219, 127);
             this.vitamin_in.Name = "vitamin_in";
-            this.vitamin_in.Size = new System.Drawing.Size(100, 22);
+            this.vitamin_in.Size = new System.Drawing.Size(100, 31);
             this.vitamin_in.TabIndex = 9;
             // 
             // protein_in
             // 
+            this.protein_in.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.protein_in.Location = new System.Drawing.Point(219, 89);
             this.protein_in.Name = "protein_in";
-            this.protein_in.Size = new System.Drawing.Size(100, 22);
+            this.protein_in.Size = new System.Drawing.Size(100, 31);
             this.protein_in.TabIndex = 8;
             // 
             // carbo_in
             // 
+            this.carbo_in.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carbo_in.Location = new System.Drawing.Point(219, 48);
             this.carbo_in.Name = "carbo_in";
-            this.carbo_in.Size = new System.Drawing.Size(100, 22);
+            this.carbo_in.Size = new System.Drawing.Size(100, 31);
             this.carbo_in.TabIndex = 7;
             // 
             // label12

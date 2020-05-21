@@ -156,7 +156,13 @@ namespace FitnessTracker2._0
 
         }
 
-       
+        private void changepwd_Click(object sender, EventArgs e)
+        {
+            
+            changepwd newform = new changepwd();
+            newform.Show();
+            this.Close();
+        }
 
         public int findUID()
         {

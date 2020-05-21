@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -48,9 +48,13 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.listBox1);
-            this.groupBox6.Location = new System.Drawing.Point(31, 306);
+            this.groupBox6.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.groupBox6.Location = new System.Drawing.Point(28, 245);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(311, 201);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Size = new System.Drawing.Size(276, 161);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Junk List";
@@ -58,19 +62,25 @@
             // listBox1
             // 
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(51, 34);
+            this.listBox1.ItemHeight = 24;
+            this.listBox1.Location = new System.Drawing.Point(45, 27);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(241, 140);
+            this.listBox1.Size = new System.Drawing.Size(214, 96);
             this.listBox1.TabIndex = 0;
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.chart1);
-            this.groupBox5.Location = new System.Drawing.Point(384, 82);
+            this.groupBox5.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.groupBox5.Location = new System.Drawing.Point(341, 66);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(489, 434);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(435, 347);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Diet Nutrients Graph";
@@ -78,20 +88,21 @@
             // chart1
             // 
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(21, 73);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(19, 58);
+            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.CustomProperties = "CollectedSliceExploded=True, PieLabelStyle=Disabled";
-            series1.IsXValueIndexed = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(450, 339);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.CustomProperties = "CollectedSliceExploded=True, PieLabelStyle=Disabled";
+            series2.IsXValueIndexed = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(400, 271);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -100,47 +111,57 @@
             this.groupBox4.Controls.Add(this.DESC);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.progressBar1);
-            this.groupBox4.Location = new System.Drawing.Point(28, 71);
+            this.groupBox4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.groupBox4.Location = new System.Drawing.Point(25, 57);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(314, 201);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(279, 161);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "CalorieGoal";
             // 
             // DESC
             // 
-            this.DESC.Location = new System.Drawing.Point(6, 152);
+            this.DESC.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DESC.ForeColor = System.Drawing.Color.Black;
+            this.DESC.Location = new System.Drawing.Point(5, 122);
             this.DESC.Name = "DESC";
-            this.DESC.Size = new System.Drawing.Size(289, 35);
+            this.DESC.Size = new System.Drawing.Size(257, 28);
             this.DESC.TabIndex = 2;
             this.DESC.Text = "label6";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(99, 42);
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(88, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 48);
+            this.label5.Size = new System.Drawing.Size(89, 38);
             this.label5.TabIndex = 1;
             this.label5.Text = "Calories Goal till now";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(54, 109);
+            this.progressBar1.Location = new System.Drawing.Point(48, 87);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progressBar1.MarqueeAnimationSpeed = 40;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(187, 23);
+            this.progressBar1.Size = new System.Drawing.Size(166, 18);
             this.progressBar1.TabIndex = 0;
             // 
             // DDietToday
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(885, 588);
+            this.ClientSize = new System.Drawing.Size(787, 470);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DDietToday";
             this.Text = "DDietToday";
             this.groupBox6.ResumeLayout(false);

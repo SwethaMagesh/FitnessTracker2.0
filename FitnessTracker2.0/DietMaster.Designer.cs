@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.DietName = new System.Windows.Forms.TextBox();
-            this.carbo = new System.Windows.Forms.TextBox();
-            this.Yes = new System.Windows.Forms.RadioButton();
-            this.No = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.prot = new System.Windows.Forms.TextBox();
-            this.vit = new System.Windows.Forms.TextBox();
-            this.fat = new System.Windows.Forms.TextBox();
-            this.cal = new System.Windows.Forms.TextBox();
-            this.other = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
+            this.other = new System.Windows.Forms.TextBox();
+            this.cal = new System.Windows.Forms.TextBox();
+            this.fat = new System.Windows.Forms.TextBox();
+            this.vit = new System.Windows.Forms.TextBox();
+            this.prot = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.No = new System.Windows.Forms.RadioButton();
+            this.Yes = new System.Windows.Forms.RadioButton();
+            this.carbo = new System.Windows.Forms.TextBox();
+            this.DietName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,92 +84,128 @@
             this.panel1.Size = new System.Drawing.Size(439, 422);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // Save
             // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.listBox1);
-            this.panel2.Location = new System.Drawing.Point(479, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(282, 422);
-            this.panel2.TabIndex = 1;
+            this.Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Save.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.ForeColor = System.Drawing.SystemColors.Window;
+            this.Save.Location = new System.Drawing.Point(319, 230);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(105, 59);
+            this.Save.TabIndex = 19;
+            this.Save.Text = "Add this food";
+            this.Save.UseVisualStyleBackColor = false;
             // 
-            // listBox1
+            // other
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(41, 66);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(203, 308);
-            this.listBox1.TabIndex = 0;
+            this.other.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.other.Location = new System.Drawing.Point(197, 370);
+            this.other.Name = "other";
+            this.other.Size = new System.Drawing.Size(100, 31);
+            this.other.TabIndex = 18;
             // 
-            // label1
+            // cal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(49, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "EXISTING RECIPES";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.cal.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cal.Location = new System.Drawing.Point(197, 330);
+            this.cal.Name = "cal";
+            this.cal.Size = new System.Drawing.Size(100, 31);
+            this.cal.TabIndex = 17;
             // 
-            // label2
+            // fat
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(120, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ADD NEW RECIPE";
+            this.fat.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fat.Location = new System.Drawing.Point(197, 290);
+            this.fat.Name = "fat";
+            this.fat.Size = new System.Drawing.Size(100, 31);
+            this.fat.TabIndex = 16;
             // 
-            // label3
+            // vit
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 24);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Diet Name";
+            this.vit.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vit.Location = new System.Drawing.Point(197, 253);
+            this.vit.Name = "vit";
+            this.vit.Size = new System.Drawing.Size(100, 31);
+            this.vit.TabIndex = 15;
             // 
-            // label4
+            // prot
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(65, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 24);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Junk";
+            this.prot.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prot.Location = new System.Drawing.Point(197, 216);
+            this.prot.Name = "prot";
+            this.prot.Size = new System.Drawing.Size(100, 31);
+            this.prot.TabIndex = 14;
             // 
-            // DietName
+            // label11
             // 
-            this.DietName.Location = new System.Drawing.Point(197, 56);
-            this.DietName.Name = "DietName";
-            this.DietName.Size = new System.Drawing.Size(100, 22);
-            this.DietName.TabIndex = 3;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(66, 370);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 24);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Others";
             // 
-            // carbo
+            // label10
             // 
-            this.carbo.Location = new System.Drawing.Point(197, 172);
-            this.carbo.Name = "carbo";
-            this.carbo.Size = new System.Drawing.Size(100, 22);
-            this.carbo.TabIndex = 4;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(65, 330);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 24);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Calories";
             // 
-            // Yes
+            // label9
             // 
-            this.Yes.AutoSize = true;
-            this.Yes.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Yes.Location = new System.Drawing.Point(197, 94);
-            this.Yes.Name = "Yes";
-            this.Yes.Size = new System.Drawing.Size(60, 28);
-            this.Yes.TabIndex = 5;
-            this.Yes.TabStop = true;
-            this.Yes.Text = "Yes";
-            this.Yes.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(67, 293);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 24);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Fat";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(67, 256);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 24);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Vitamins";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(67, 219);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 24);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Protein";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(63, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 24);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Carbohydrates";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(64, 137);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(193, 25);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Nutrients Per Serving";
             // 
             // No
             // 
@@ -183,123 +219,95 @@
             this.No.Text = "No";
             this.No.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // Yes
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(64, 137);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 25);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Nutrients Per Serving";
+            this.Yes.AutoSize = true;
+            this.Yes.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Yes.Location = new System.Drawing.Point(197, 94);
+            this.Yes.Name = "Yes";
+            this.Yes.Size = new System.Drawing.Size(60, 28);
+            this.Yes.TabIndex = 5;
+            this.Yes.TabStop = true;
+            this.Yes.Text = "Yes";
+            this.Yes.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // carbo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(66, 172);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 24);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Carbohydrates";
+            this.carbo.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbo.Location = new System.Drawing.Point(197, 179);
+            this.carbo.Name = "carbo";
+            this.carbo.Size = new System.Drawing.Size(100, 31);
+            this.carbo.TabIndex = 4;
             // 
-            // label7
+            // DietName
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(67, 213);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 24);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Protein";
+            this.DietName.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DietName.Location = new System.Drawing.Point(197, 53);
+            this.DietName.Name = "DietName";
+            this.DietName.Size = new System.Drawing.Size(100, 31);
+            this.DietName.TabIndex = 3;
             // 
-            // label8
+            // label4
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(67, 249);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 24);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Vitamins";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(65, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 24);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Junk";
             // 
-            // label9
+            // label3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(67, 283);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 24);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Fat";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(65, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 24);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Diet Name";
             // 
-            // label10
+            // label2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(65, 316);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 24);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Calories";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(120, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ADD NEW RECIPE";
             // 
-            // label11
+            // panel2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(66, 350);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 24);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Others";
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.listBox1);
+            this.panel2.Location = new System.Drawing.Point(479, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(282, 422);
+            this.panel2.TabIndex = 1;
             // 
-            // prot
+            // label1
             // 
-            this.prot.Location = new System.Drawing.Point(197, 214);
-            this.prot.Name = "prot";
-            this.prot.Size = new System.Drawing.Size(100, 22);
-            this.prot.TabIndex = 14;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(49, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "EXISTING RECIPES";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // vit
+            // listBox1
             // 
-            this.vit.Location = new System.Drawing.Point(197, 250);
-            this.vit.Name = "vit";
-            this.vit.Size = new System.Drawing.Size(100, 22);
-            this.vit.TabIndex = 15;
-            // 
-            // fat
-            // 
-            this.fat.Location = new System.Drawing.Point(197, 283);
-            this.fat.Name = "fat";
-            this.fat.Size = new System.Drawing.Size(100, 22);
-            this.fat.TabIndex = 16;
-            // 
-            // cal
-            // 
-            this.cal.Location = new System.Drawing.Point(197, 317);
-            this.cal.Name = "cal";
-            this.cal.Size = new System.Drawing.Size(100, 22);
-            this.cal.TabIndex = 17;
-            // 
-            // other
-            // 
-            this.other.Location = new System.Drawing.Point(197, 351);
-            this.other.Name = "other";
-            this.other.Size = new System.Drawing.Size(100, 22);
-            this.other.TabIndex = 18;
-            // 
-            // Save
-            // 
-            this.Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Save.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.ForeColor = System.Drawing.SystemColors.Window;
-            this.Save.Location = new System.Drawing.Point(319, 230);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(105, 59);
-            this.Save.TabIndex = 19;
-            this.Save.Text = "Add this food";
-            this.Save.UseVisualStyleBackColor = false;
+            this.listBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 24;
+            this.listBox1.Location = new System.Drawing.Point(41, 66);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(203, 292);
+            this.listBox1.TabIndex = 0;
             // 
             // label12
             // 

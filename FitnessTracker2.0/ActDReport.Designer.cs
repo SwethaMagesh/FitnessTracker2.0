@@ -69,7 +69,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.high.DefaultCellStyle = dataGridViewCellStyle2;
             this.high.GridColor = System.Drawing.Color.Black;
-            this.high.Location = new System.Drawing.Point(459, 358);
+            this.high.Location = new System.Drawing.Point(408, 286);
+            this.high.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.high.Name = "high";
             this.high.ReadOnly = true;
             this.high.RowHeadersVisible = false;
@@ -82,7 +83,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.high.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.high.RowTemplate.ReadOnly = true;
-            this.high.Size = new System.Drawing.Size(409, 198);
+            this.high.Size = new System.Drawing.Size(364, 158);
             this.high.TabIndex = 1;
             // 
             // low
@@ -107,14 +108,15 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.low.DefaultCellStyle = dataGridViewCellStyle5;
             this.low.GridColor = System.Drawing.Color.Black;
-            this.low.Location = new System.Drawing.Point(459, 107);
+            this.low.Location = new System.Drawing.Point(408, 86);
+            this.low.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.low.Name = "low";
             this.low.ReadOnly = true;
             this.low.RowHeadersVisible = false;
             this.low.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.low.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.low.RowTemplate.ReadOnly = true;
-            this.low.Size = new System.Drawing.Size(409, 207);
+            this.low.Size = new System.Drawing.Size(364, 166);
             this.low.TabIndex = 1;
             // 
             // groupBox1
@@ -127,9 +129,11 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.groupBox1.Location = new System.Drawing.Point(0, 80);
+            this.groupBox1.Location = new System.Drawing.Point(0, 64);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(453, 486);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(403, 389);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report";
@@ -139,9 +143,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(30, 49);
+            this.label1.Location = new System.Drawing.Point(27, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 24);
+            this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Activity";
             // 
@@ -150,9 +154,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(356, 49);
+            this.label4.Location = new System.Drawing.Point(316, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 24);
+            this.label4.Size = new System.Drawing.Size(61, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Remark";
             // 
@@ -161,9 +165,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(214, 49);
+            this.label3.Location = new System.Drawing.Point(190, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 24);
+            this.label3.Size = new System.Drawing.Size(98, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Story So far";
             // 
@@ -172,9 +176,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(124, 49);
+            this.label2.Location = new System.Drawing.Point(110, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Target";
             // 
@@ -183,9 +187,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(521, 69);
+            this.label6.Location = new System.Drawing.Point(463, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(267, 35);
+            this.label6.Size = new System.Drawing.Size(225, 29);
             this.label6.TabIndex = 9;
             this.label6.Text = "Low Intense workouts";
             // 
@@ -194,23 +198,24 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(521, 317);
+            this.label5.Location = new System.Drawing.Point(463, 254);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(277, 35);
+            this.label5.Size = new System.Drawing.Size(233, 29);
             this.label5.TabIndex = 10;
             this.label5.Text = "High Intense workouts";
             // 
             // ActDReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(885, 588);
+            this.ClientSize = new System.Drawing.Size(889, 597);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.low);
             this.Controls.Add(this.high);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ActDReport";
             this.Text = "ActDReport";
             ((System.ComponentModel.ISupportInitialize)(this.high)).EndInit();

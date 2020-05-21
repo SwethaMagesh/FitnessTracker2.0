@@ -80,6 +80,12 @@
     <Compile Include="ActLog.Designer.cs">
       <DependentUpon>ActLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="changepwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changepwd.Designer.cs">
+      <DependentUpon>changepwd.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateAcnt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ActLog.resx">
       <DependentUpon>ActLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepwd.resx">
+      <DependentUpon>changepwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAcnt.resx">
       <DependentUpon>CreateAcnt.cs</DependentUpon>

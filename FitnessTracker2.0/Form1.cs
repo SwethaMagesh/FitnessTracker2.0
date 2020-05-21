@@ -92,6 +92,7 @@ namespace FitnessTracker2._0
 
         private void profile_Click_1(object sender, EventArgs e)
         {
+           
             openChildForm(new UserPage());
             hidesub();
         }

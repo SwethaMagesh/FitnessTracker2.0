@@ -62,7 +62,7 @@
             this.password.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.Location = new System.Drawing.Point(619, 273);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(183, 47);
+            this.password.Size = new System.Drawing.Size(183, 40);
             this.password.TabIndex = 21;
             this.password.UseSystemPasswordChar = true;
             // 
@@ -72,7 +72,7 @@
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(425, 279);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 39);
+            this.label3.Size = new System.Drawing.Size(119, 33);
             this.label3.TabIndex = 20;
             this.label3.Text = "Password";
             // 
@@ -81,7 +81,7 @@
             this.user.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user.Location = new System.Drawing.Point(619, 222);
             this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(183, 47);
+            this.user.Size = new System.Drawing.Size(183, 40);
             this.user.TabIndex = 19;
             // 
             // login1
@@ -108,7 +108,7 @@
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(425, 222);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 39);
+            this.label2.Size = new System.Drawing.Size(139, 33);
             this.label2.TabIndex = 17;
             this.label2.Text = "User name ";
             // 
@@ -119,7 +119,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(386, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 36);
+            this.label1.Size = new System.Drawing.Size(341, 31);
             this.label1.TabIndex = 16;
             this.label1.Text = "Welcome to Fitness Tracker";
             // 
@@ -129,10 +129,10 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1178, 644);
+            this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.password);
             this.Controls.Add(this.label3);
