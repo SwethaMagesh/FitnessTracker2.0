@@ -141,10 +141,7 @@ namespace FitnessTracker2._0
 
         }
 
-        private void Gobut_Click(object sender, EventArgs e)
-        {
-            Filldietgraph(yrboxdiet.Text, comboBoxdiet.SelectedIndex.ToString());
-        }
+       
 
         void findUser()
         {
@@ -174,6 +171,15 @@ namespace FitnessTracker2._0
                 con1.Close();
             }
 
+        }
+
+
+
+       
+
+        private void comboBoxdiet_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            Filldietgraph(yrboxdiet.Text, comboBoxdiet.SelectedIndex.ToString());
         }
     }
 }

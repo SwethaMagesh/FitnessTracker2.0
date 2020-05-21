@@ -15,12 +15,18 @@ namespace FitnessTracker2._0
     {
         public static string constr1 = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection condatabase = new MySqlConnection(constr1);
+        MySqlConnection con1 = new MySqlConnection(constr1);
+        int  total;
         int uid = 0;
-        public HomePage()
+        Form1 myparent;
+        public HomePage(Form1 myp)
         {
+            this.myparent = myp;
             InitializeComponent();
             FindingUser();
             AddPic();
+            QuoteLoader();
+            
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -131,35 +137,43 @@ namespace FitnessTracker2._0
             if(cb<=((CaloriToBurn*25)/100)&&ci<=((gi*25)/100))
             {
                 pb.Image= (Bitmap)Properties.Resources.ResourceManager.GetObject(list[3]);
+                goodOrBad.Text = "Needs attention! ";
             }
             else if((cb<=( (CaloriToBurn * 25) / 100) && ci>((gi*25)/100)) || (cb> (CaloriToBurn * 25) / 100 && ci<=((gi*25)/100)))
             {
                 pb.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(list[2]);
+                goodOrBad.Text = " Neither too good nor too bad!";
             }
             else if(cb>=((CaloriToBurn*75)/100) && ci>=((gi*75)/100))
             {
                 pb.Image= (Bitmap)Properties.Resources.ResourceManager.GetObject(list[1]);
+                goodOrBad.Text = "Excellent! Stay consistent this way!";
             }
             else
             {
                 pb.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(list[2]);
+                goodOrBad.Text = "Neither too good nor too bad!";
             }
-            pic.Text = "About Today";
+            
+            
             if (flag == 0)
             {
+                goodOrBad.Text = "";
+                AboutYou.Text = "";
                 pic.Text = "Welcome To Fitness Traker";
                 pb.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(list[0]);
             }
             else
             {
-                if(cb>ci)
+                pic.Text = "Your goals and how you have met them is helping you being rated as Good, Average or Bad";
+                if ((cb+1500)>ci)
                 {
-                    AboutYouLabel.Text = "Fitness Freak";
+                    AboutYou.Text = "You are a FITNESS FREAK today";
                     AboutYouPic.Image= (Bitmap)Properties.Resources.ResourceManager.GetObject(list[5]);
                 }
                 else
                 {
-                    AboutYouLabel.Text = "Foody";
+                    AboutYou.Text = "You are a FOODDIEE today";
                     AboutYouPic.Image= (Bitmap)Properties.Resources.ResourceManager.GetObject(list[4]);
                  
 
@@ -169,10 +183,45 @@ namespace FitnessTracker2._0
 
         }
 
-        private void pic1_Paint(object sender, PaintEventArgs e)
+        private void QuoteLoader()
         {
+            myparent.cnt++;
+            
+
+            try
+            {
+                con1.Open();
+                string query = "select max(id) from quotes";
+                MySqlCommand cmd = new MySqlCommand(query, con1);
+                MySqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    total = dr.GetInt32(0);
+                }
+                dr.Close();
+                query = "select line from quotes where id=" + myparent.cnt;
+                cmd = new MySqlCommand(query, con1);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    label2.Text = dr.GetString(0);
+                    myparent.cnt++;
+                    if (myparent.cnt > total)
+                        myparent.cnt = 1;
+
+                }
+
+
+
+
+            }
+            catch (Exception er)
+            {
+
+            }
 
         }
+
     }
 
 }

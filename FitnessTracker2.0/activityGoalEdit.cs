@@ -59,13 +59,13 @@ namespace FitnessTracker2._0
                 //label.Tag = i.ToString();
                 label.Text = myReader.GetString("ActivityName");
                 label.AutoSize = true;
-                label.Location = new Point(219,200+ i * 60);
+                label.Location = new Point(219,120+ i * 60);
                 label.Font = new Font("Microsoft Sans Serif", 10);
                 textbox = new TextBox();
                 textbox.Text = myReader.GetString("ActDuration");
                 //textbox.Tag = i.ToString();
                 textbox.Name = "txt" + i.ToString();
-                textbox.Location = new Point(393, 200+60 * i);
+                textbox.Location = new Point(393, 120+60 * i);
                 textbox.Font = new Font("Microsoft Sans Serif", 10);
                 this.Controls.Add(label);
                 this.Controls.Add(textbox);
@@ -74,16 +74,8 @@ namespace FitnessTracker2._0
             condatabase.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void activityGoatEdit_Load(object sender, EventArgs e)
-        {
-
-        }
-
+       
+        
         private void button1_Click_1(object sender, EventArgs e)
         {
             int k;

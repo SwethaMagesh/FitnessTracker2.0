@@ -126,7 +126,7 @@
             // 
             // category
             // 
-            this.category.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.category.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.category.FormattingEnabled = true;
             this.category.Items.AddRange(new object[] {
             "Low physical Activity",
@@ -134,7 +134,7 @@
             "Moderate physical Activiy"});
             this.category.Location = new System.Drawing.Point(173, 125);
             this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(207, 36);
+            this.category.Size = new System.Drawing.Size(207, 31);
             this.category.TabIndex = 15;
             // 
             // label3
@@ -183,7 +183,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.groupBox3.Location = new System.Drawing.Point(469, 57);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(386, 243);
+            this.groupBox3.Size = new System.Drawing.Size(410, 243);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Health Data";
@@ -193,7 +193,7 @@
             this.email.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.email.Location = new System.Drawing.Point(143, 90);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(144, 35);
+            this.email.Size = new System.Drawing.Size(215, 35);
             this.email.TabIndex = 11;
             // 
             // phone

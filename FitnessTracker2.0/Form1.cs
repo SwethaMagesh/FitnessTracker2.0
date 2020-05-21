@@ -12,6 +12,7 @@ namespace FitnessTracker2._0
 {
     public partial class Form1 : Form
     {
+        public int cnt = 1;
         public Form1()
         {
             InitializeComponent();
@@ -92,7 +93,7 @@ namespace FitnessTracker2._0
 
         private void profile_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new UserPage());
+            openChildForm(new UserPage(this));
             hidesub();
         }
 
@@ -160,16 +161,13 @@ namespace FitnessTracker2._0
 
         }
 
-        private void childpanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
        
 
         private void HomePage_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new HomePage());
+            openChildForm(new HomePage(this));
             hidesub();
         }
     }

@@ -46,6 +46,7 @@ namespace FitnessTracker2._0
                                 //code for home page
                                     this.Close();
                                     myparent.toggleNav();
+                                myparent.openChildForm(new HomePage(myparent));
                                     
 
                                 }

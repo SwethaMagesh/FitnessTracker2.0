@@ -22,9 +22,43 @@ namespace FitnessTracker2._0
             this.myparent = source;
             InitializeComponent();
             FindingUser();
+            
             goalselected(0);
             selectact();
             GoalDiet();
+        }
+        void calculateRecommendation()
+        {
+            try
+            {
+                condatabase.Open();
+                string Query = "select weight,category from user where userid=" + uid;
+
+                MySqlCommand cmd = new MySqlCommand(Query, condatabase);
+                MySqlDataReader dr = cmd.ExecuteReader();
+                if(dr.Read())
+                {
+                    int w = dr.GetInt32("weight");
+                    double ratio;
+                    string cat = dr.GetString("category");
+                    if (cat == "High physical Activity")
+                        ratio = 1.75;
+                    else if (cat == "Low physical Activity")
+                        ratio = 1.25;
+                    else
+                        ratio = 1.55;
+
+                    double rec = 44 * w * ratio;
+                    Console.WriteLine(cat);
+                    AddDietGoal.Text = "You are recommended for a minimum diet goal of " + rec.ToString() + " calories ! Add some 500 cal or something depending on your workout plan!!";
+
+                }
+            }
+            catch(Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+
         }
         void selectact()
         {
@@ -92,12 +126,18 @@ namespace FitnessTracker2._0
                 if (gl == 0)
                 {
                     AddDiet.Text = "ADD";
+                    condatabase.Close();
+                    Console.WriteLine("does it recommend?");
+                    calculateRecommendation();
+                    
+                    
+
                 }
                 else
                 {
                     DietGoal.Text = Convert.ToString(gl);
                     AddDiet.Text = "EDIT";
-                    AddDietGoal.Text = "Calories To Be Taken-" + gl;
+                    AddDietGoal.Text = "Calories To Be Taken : " + gl;
                     //SetUrGoal.Items.Add("Calories To Be Taken-"+gl);
 
                 }
