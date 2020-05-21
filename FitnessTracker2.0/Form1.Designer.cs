@@ -392,6 +392,7 @@
             // childpanel1
             // 
             this.childpanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.childpanel1.BackgroundImage = global::FitnessTracker2._0.Properties.Resources.BG2;
             this.childpanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.childpanel1.Location = new System.Drawing.Point(271, 0);
             this.childpanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

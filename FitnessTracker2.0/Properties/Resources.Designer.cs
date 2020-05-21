@@ -63,16 +63,6 @@ namespace FitnessTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Arrows_Down_4_icon {
-            get {
-                object obj = ResourceManager.GetObject("Arrows_Down_4_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap diet {
             get {
                 object obj = ResourceManager.GetObject("diet", resourceCulture);
@@ -96,6 +86,16 @@ namespace FitnessTracker2._0.Properties {
         internal static System.Drawing.Bitmap goal1 {
             get {
                 object obj = ResourceManager.GetObject("goal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

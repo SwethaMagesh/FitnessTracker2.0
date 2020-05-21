@@ -231,5 +231,56 @@
   <ItemGroup>
     <None Include="Resources\logo1.jfif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG11 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bg.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
