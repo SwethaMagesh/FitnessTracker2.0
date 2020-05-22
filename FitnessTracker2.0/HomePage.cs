@@ -27,7 +27,9 @@ namespace FitnessTracker2._0
             FindingUser();
             AddPic();
             QuoteLoader();
-            if(text!="")
+
+            if(text != "")
+
             {
                 PopupNotifier popup = new PopupNotifier();
                 popup.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("icon");
@@ -174,7 +176,7 @@ namespace FitnessTracker2._0
             {
                 goodOrBad.Text = "";
                 AboutYou.Text = "";
-                pic.Text = "Welcome To Fitness Traker";
+                pic.Text = "ODYSSEY wishes you a great day ahead!";
                 pb.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(list[0]);
             }
             else
@@ -199,7 +201,7 @@ namespace FitnessTracker2._0
 
         private void QuoteLoader()
         {
-            myparent.cnt++;
+            
             
 
             try
@@ -213,6 +215,7 @@ namespace FitnessTracker2._0
                     total = dr.GetInt32(0);
                 }
                 dr.Close();
+               // Console.WriteLine(myparent.cnt.ToString() + total.ToString());
                 query = "select line from quotes where id=" + myparent.cnt;
                 cmd = new MySqlCommand(query, con1);
                 dr = cmd.ExecuteReader();
@@ -221,7 +224,10 @@ namespace FitnessTracker2._0
                     label2.Text = dr.GetString(0);
                     myparent.cnt++;
                     if (myparent.cnt > total)
+                    {
                         myparent.cnt = 1;
+                        
+                    }
 
                 }
 
@@ -233,7 +239,7 @@ namespace FitnessTracker2._0
             {
 
             }
-
+            
         }
 
         private void pic_Click(object sender, EventArgs e)

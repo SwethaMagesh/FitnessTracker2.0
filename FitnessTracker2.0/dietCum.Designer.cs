@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.yrboxdiet = new System.Windows.Forms.RichTextBox();
@@ -123,31 +123,31 @@
             // 
             // dietchart
             // 
-            chartArea9.Area3DStyle.Inclination = 20;
-            chartArea9.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea9.Area3DStyle.PointDepth = 200;
-            chartArea9.Area3DStyle.PointGapDepth = 200;
-            chartArea9.Area3DStyle.WallWidth = 0;
-            chartArea9.Name = "ChartArea1";
-            this.dietchart.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.dietchart.Legends.Add(legend9);
+            chartArea1.Area3DStyle.Inclination = 20;
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.Area3DStyle.PointDepth = 200;
+            chartArea1.Area3DStyle.PointGapDepth = 200;
+            chartArea1.Area3DStyle.WallWidth = 0;
+            chartArea1.Name = "ChartArea1";
+            this.dietchart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.dietchart.Legends.Add(legend1);
             this.dietchart.Location = new System.Drawing.Point(3, 133);
             this.dietchart.Name = "dietchart";
-            series9.ChartArea = "ChartArea1";
-            series9.EmptyPointStyle.AxisLabel = "Days of Month";
-            series9.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
-            series9.IsValueShownAsLabel = true;
-            series9.IsVisibleInLegend = false;
-            series9.IsXValueIndexed = true;
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.dietchart.Series.Add(series9);
+            series1.ChartArea = "ChartArea1";
+            series1.EmptyPointStyle.AxisLabel = "Days of Month";
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            series1.IsValueShownAsLabel = true;
+            series1.IsVisibleInLegend = false;
+            series1.IsXValueIndexed = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.dietchart.Series.Add(series1);
             this.dietchart.Size = new System.Drawing.Size(393, 242);
             this.dietchart.TabIndex = 5;
             this.dietchart.Text = "dietchart";
-            title5.Name = "Avg. Duration of Workout";
-            this.dietchart.Titles.Add(title5);
+            title1.Name = "Avg. Duration of Workout";
+            this.dietchart.Titles.Add(title1);
             // 
             // groupBox2
             // 
@@ -174,20 +174,27 @@
             // 
             // chart2
             // 
-            chartArea10.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart2.Legends.Add(legend10);
-            this.chart2.Location = new System.Drawing.Point(3, 128);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Comic Sans MS", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.Position.Auto = false;
+            legend2.Position.Height = 30.25F;
+            legend2.Position.Width = 22.0339F;
+            legend2.Position.X = 74.9661F;
+            legend2.Position.Y = 3F;
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(3, 127);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series10.CustomProperties = "CollectedSliceExploded=True, PieDrawingStyle=SoftEdge, PieLabelStyle=Outside";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chart2.Series.Add(series10);
-            this.chart2.Size = new System.Drawing.Size(414, 254);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.CustomProperties = "CollectedSliceExploded=True, PieDrawingStyle=SoftEdge, PieLabelStyle=Outside";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
+            this.chart2.Size = new System.Drawing.Size(414, 321);
             this.chart2.TabIndex = 6;
             this.chart2.Text = "chartJunk";
             // 
@@ -213,15 +220,16 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 31);
             this.comboBox2.TabIndex = 4;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(164, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(513, 36);
+            this.label1.Size = new System.Drawing.Size(593, 45);
             this.label1.TabIndex = 18;
             this.label1.Text = "Here\'s what numbers tell about you!";
             // 

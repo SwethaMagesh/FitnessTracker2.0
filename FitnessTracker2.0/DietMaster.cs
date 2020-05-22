@@ -199,7 +199,7 @@ namespace FitnessTracker2._0
                     else
                         MessageBox.Show("Select yes or no");
                     con1.Open();
-                    string Query = "insert into DietMaster values (" + res + ",' " + DietName.Text + " ',' " + carbo.Text + " ', ' " + prot.Text + " ',' " + vit.Text + " ',' " + fat.Text + " ', ' " + cal.Text + " ',' " + other.Text + " ',' " + JUNK + " ');";
+                    string Query = "insert into DietMaster values (" + res + ",'" + DietName.Text + " ',' " + carbo.Text + " ', ' " + prot.Text + " ',' " + vit.Text + " ',' " + fat.Text + " ', ' " + cal.Text + " ',' " + other.Text + " ',' " + JUNK + " ');";
                     MySqlCommand cmd = new MySqlCommand(Query, con1);
                     cmd.ExecuteNonQuery();
                     //MessageBox.Show("Details saved successfully");
@@ -207,7 +207,7 @@ namespace FitnessTracker2._0
                     msg.StartPosition = FormStartPosition.Manual;
                     msg.Left = 300;
                     msg.Top = 200;
-                    msg.Show();
+                   msg.ShowDialog();
 
 
                     listBox1.Items.Add(res + " . " + DietName.Text);

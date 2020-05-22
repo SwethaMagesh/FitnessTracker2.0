@@ -90,7 +90,9 @@ namespace FitnessTracker2._0
                     msg.StartPosition = FormStartPosition.Manual;
                     msg.Left = 300;
                     msg.Top = 200;
-                    msg.ShowDialog();
+
+                   msg.ShowDialog();
+
                     listBox1.Items.Add(res + ") " + nameBox.Text);
                     nameBox.Text = ""; cal.Text = "";
 

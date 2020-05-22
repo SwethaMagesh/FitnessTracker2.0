@@ -95,7 +95,9 @@ namespace FitnessTracker2._0
                 msg.StartPosition = FormStartPosition.Manual;
                 msg.Left = 300;
                 msg.Top = 200;
-                msg.ShowDialog();
+
+               msg.ShowDialog();
+
                 con1.Close();
                 this.Close();
                 myparent.openChildForm(new HomePage(myparent));
@@ -206,7 +208,7 @@ namespace FitnessTracker2._0
             else if (female.Checked)
                 gender = "Female";
             else
-                MessageBox.Show("Please select a gender:");
+            { MessageBox.Show("Please select a gender:"); return; }
             if (!email_Text())
                 return;
             if (!phone_Text())
@@ -232,9 +234,11 @@ namespace FitnessTracker2._0
                 msg.StartPosition = FormStartPosition.Manual;
                 msg.Left = 300;
                 msg.Top = 200;
-                msg.ShowDialog();
+
+               msg.ShowDialog();
                 this.Close();
-                myparent.openChildForm(new HomePage(myparent,"Set your Goal and track your fitness"));
+                myparent.openChildForm(new HomePage(myparent, "Set your Goal and track your fitness"));
+
 
 
             }
