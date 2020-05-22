@@ -27,16 +27,23 @@ namespace FitnessTracker2._0
             FindingUser();
             AddPic();
             QuoteLoader();
+
             if(text != "")
+
             {
                 PopupNotifier popup = new PopupNotifier();
                 popup.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("icon");
                 popup.TitleText = "Welcome to Odyssey";
                 popup.ContentText = text;
                 popup.Popup();
+
             }
             
+
+
+
         }
+    
 
         private void HomePage_Load(object sender, EventArgs e)
         {
@@ -235,6 +242,10 @@ namespace FitnessTracker2._0
             
         }
 
+        private void pic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

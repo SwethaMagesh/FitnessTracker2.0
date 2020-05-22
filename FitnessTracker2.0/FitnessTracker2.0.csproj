@@ -248,6 +248,7 @@
     <None Include="Resources\logo1.jfif" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Resources\Green1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -261,6 +262,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\runlogo.jpg" />
+
+    <None Include="Resources\512-05-512.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

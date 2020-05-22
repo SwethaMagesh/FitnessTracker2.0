@@ -180,7 +180,9 @@ namespace FitnessTracker2._0
                 msg.StartPosition = FormStartPosition.Manual;
                 msg.Left = 300;
                 msg.Top = 200;
+
                msg.ShowDialog();
+
 
             }
             catch (Exception ex)
