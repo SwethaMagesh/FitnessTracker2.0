@@ -137,8 +137,8 @@ namespace FitnessTracker2._0
             if (calDis > progressBar1.Maximum)
             {
                 progressBar1.Value = progressBar1.Maximum;
-                MessageBox.Show("You Have EATEN EXCESS! ", "More cal today", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DESC.Text += "You have EATEN EXCESS";
+                //MessageBox.Show("You Have EATEN EXCESS! ", "More cal today", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DESC.Text += " (You have EATEN EXCESS)";
             }
             else
             {

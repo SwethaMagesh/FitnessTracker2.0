@@ -250,6 +250,9 @@ namespace FitnessTracker2._0
                     msg.Left = 300;
                     msg.Top = 200;
                     msg.Show();
+                    //this.Close();
+                    //myparent.openChildForm(new HomePage(myparent));
+                    
                 }
                 condatabase.Close();
             }

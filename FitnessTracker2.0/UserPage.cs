@@ -206,7 +206,7 @@ namespace FitnessTracker2._0
             else if (female.Checked)
                 gender = "Female";
             else
-                MessageBox.Show("Please select a gender:");
+            { MessageBox.Show("Please select a gender:"); return; }
             if (!email_Text())
                 return;
             if (!phone_Text())
