@@ -89,9 +89,13 @@ namespace FitnessTracker2._0
                     chart2.Series[0].Points.AddXY("Healthy", 100 - p);
 
                 }
-                chart2.Series[0].Points.Clear();
-                chart2.Series[0].Points.AddXY("Junk", 0);
-                chart2.Series[0].Points.AddXY("Healthy", 0);
+                else
+                {
+                    chart2.Series[0].Points.Clear();
+                    chart2.Series[0].Points.AddXY("Junk", 0);
+                    chart2.Series[0].Points.AddXY("Healthy", 0);
+                }
+                
 
 
 
