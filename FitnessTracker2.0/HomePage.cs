@@ -77,7 +77,7 @@ namespace FitnessTracker2._0
             int flag = 0;
             decimal sum = 0, sum1 = 0;
             List<string> list = new List<string>();
-            list.Add("welcome");
+            list.Add("welcomNew");
             list.Add("super");
             list.Add("ok");
             list.Add("bad");
@@ -153,7 +153,7 @@ namespace FitnessTracker2._0
             if(cb<=((CaloriToBurn*25)/100)&&ci<=((gi*25)/100))
             {
                 pb.Image= (Bitmap)Properties.Resources.ResourceManager.GetObject(list[3]);
-                goodOrBad.Text = "Needs attention! ";
+                goodOrBad.Text = "Needs attention! Way to go ";
             }
             else if((cb<=( (CaloriToBurn * 25) / 100) && ci>((gi*25)/100)) || (cb> (CaloriToBurn * 25) / 100 && ci<=((gi*25)/100)))
             {
@@ -163,7 +163,7 @@ namespace FitnessTracker2._0
             else if(cb>=((CaloriToBurn*75)/100) && ci>=((gi*75)/100))
             {
                 pb.Image= (Bitmap)Properties.Resources.ResourceManager.GetObject(list[1]);
-                goodOrBad.Text = "Excellent! Stay consistent this way!";
+                goodOrBad.Text = "Excellent! You reached your goal!";
             }
             else
             {

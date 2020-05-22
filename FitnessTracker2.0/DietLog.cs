@@ -197,14 +197,6 @@ namespace FitnessTracker2._0
             decimal f = x * fat;
             // int j = x * junk;
             decimal ca = x * calories;
-
-            carbo_in.Text = c.ToString();
-            protein_in.Text = p.ToString();
-            vitamin_in.Text = v.ToString();
-            fat_in.Text = f.ToString();
-            //junks.Text = j.ToString();
-            cal_in.Text = ca.ToString();
-
             Query = "insert into dietchart(LogNo,dietDate, noOfServings,Userid,DietID,carbo,Protein,Vitamin,Fat,CaloriesIntake,Remark) values("
                                         + logno1 + ",CURDATE()," + x + "," + uid + "," + id + "," + c + "," + p + "," + v + "," + f + "," + ca + ",'" + remarks.Text + "');";
 
@@ -235,7 +227,82 @@ namespace FitnessTracker2._0
             con1.Close();
         }
 
-        
+        private void serving_no_ValueChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            con1.Open();
+            //To get activity id from master table using activity name
+            string Query = "select * from dietmaster where dietname='" + diet.Text + "' ;";
+            MySqlCommand cmd = new MySqlCommand(Query, con1);
+            MySqlDataReader myReader;
+            try
+            {
+                // 
+                // 
+                myReader = cmd.ExecuteReader();
+                while (myReader.Read())
+                {
+                    id = myReader.GetInt32("DietID");
+                }
+                // con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con1.Close();
+            decimal carbo = 0, protein = 0, vitamin = 0, fat = 0, calories = 0;
+            string junk = "";
+            con1.Open();
+            Query = "select * from dietmaster where dietname='" + diet.Text + "';";
+
+
+
+            try
+            {
+                //condatabase.Open();
+                cmd = new MySqlCommand(Query, con1);
+                myReader = cmd.ExecuteReader();
+                while (myReader.Read())
+                {
+
+                    carbo = myReader.GetDecimal("Carbo");
+                    protein = myReader.GetDecimal("Protein");
+                    vitamin = myReader.GetDecimal("Vitamin");
+                    fat = myReader.GetDecimal("Fat");
+                    junk = myReader.GetString("isJunk");
+                    calories = myReader.GetDecimal("CaloriesperS");
+                }
+
+
+
+                // MessageBox.Show("Result is" + temp +" "+x +" "+CaloriesBurnt);
+                //condatabase.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            con1.Close();
+            string serve = serving_no.Value.ToString();
+            int x = Convert.ToInt32(serve);
+
+            decimal c = x * carbo;
+            decimal p = x * protein;
+            decimal v = x * vitamin;
+            decimal f = x * fat;
+            // int j = x * junk;
+            decimal ca = x * calories;
+
+            carbo_in.Text = c.ToString();
+            protein_in.Text = p.ToString();
+            vitamin_in.Text = v.ToString();
+            fat_in.Text = f.ToString();
+            //junks.Text = j.ToString();
+            cal_in.Text = ca.ToString();
+
+        }
+
         void dietintake()
         {
             con1.Open();
