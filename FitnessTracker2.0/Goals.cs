@@ -186,7 +186,7 @@ namespace FitnessTracker2._0
                 msg.StartPosition = FormStartPosition.Manual;
                 msg.Left = 300;
                 msg.Top = 200;
-                msg.Show();
+               msg.ShowDialog();
                 AddDiet.Enabled = false;
                 condatabase.Close();
                 GoalDiet();
@@ -249,7 +249,7 @@ namespace FitnessTracker2._0
                     msg.StartPosition = FormStartPosition.Manual;
                     msg.Left = 300;
                     msg.Top = 200;
-                    msg.Show();
+                   msg.ShowDialog();
                     //this.Close();
                     //myparent.openChildForm(new HomePage(myparent));
                     

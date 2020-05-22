@@ -207,7 +207,7 @@ namespace FitnessTracker2._0
                     msg.StartPosition = FormStartPosition.Manual;
                     msg.Left = 300;
                     msg.Top = 200;
-                    msg.Show();
+                   msg.ShowDialog();
 
 
                     listBox1.Items.Add(res + " . " + DietName.Text);
