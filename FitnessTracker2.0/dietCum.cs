@@ -15,7 +15,7 @@ namespace FitnessTracker2._0
     {
         public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection con1 = new MySqlConnection(constr);
-        public static string userid;
+        public static string userid="";
         public dietCum()
         {
             InitializeComponent();
@@ -28,6 +28,9 @@ namespace FitnessTracker2._0
         }
         void FillDiet()
         {
+            if (userid == "")
+                findUser();
+
             int timep = comboBox2.SelectedIndex;
             int Junk = 0, total = 0;
             double percent;
@@ -55,27 +58,41 @@ namespace FitnessTracker2._0
             {
                 con1.Open();
                 string q = "Select sum(NS) from cumDietChartReport where userid=" + userid + key;
+                Console.WriteLine(q);
                 MySqlCommand cmd = new MySqlCommand(q, con1);
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    total = dr.GetInt32(0);
+                    total = (dr.IsDBNull(0)) ? 0 : dr.GetInt32(0);
 
                 }
                 dr.Close();
                 q = "Select sum(NS) from CumDietChartReport c Join DietMaster d on d.dietid=c.dietid where d.isJunk ='Yes' and  userid =" + userid + key;
+                Console.WriteLine(q);
                 cmd = new MySqlCommand(q, con1);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    Junk = dr.GetInt32(0);
+                    Junk = (dr.IsDBNull(0)) ? 0 : dr.GetInt32(0);
                 }
-                percent = (Junk * 1.00 / total) * 100;
-                int p = Convert.ToInt32(percent);
+                if (total != 0)
+                {
+                    percent = (Junk * 1.00 / total) * 100;
+
+                    int p = Convert.ToInt32(percent);
+                    chart2.Series[0].Points.Clear();
+                    if (Junk == 0)
+                        chart2.Series[0].IsVisibleInLegend = true;
+                    else
+                        chart2.Series[0].IsVisibleInLegend = false;
+                    chart2.Series[0].Points.AddXY("Junk", p);
+                    chart2.Series[0].Points.AddXY("Healthy", 100 - p);
+
+                }
                 chart2.Series[0].Points.Clear();
-                chart2.Series[0].IsVisibleInLegend = false;
-                chart2.Series[0].Points.AddXY("Junk", p);
-                chart2.Series[0].Points.AddXY("Healthy", 100 - p);
+                chart2.Series[0].Points.AddXY("Junk", 0);
+                chart2.Series[0].Points.AddXY("Healthy", 0);
+
 
 
 
@@ -160,7 +177,7 @@ namespace FitnessTracker2._0
                     while (dr.Read())
                     {
                         userid = dr.GetString(0);
-
+                        Console.WriteLine(userid);
                     }
 
                 }
@@ -180,6 +197,11 @@ namespace FitnessTracker2._0
         private void comboBoxdiet_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             Filldietgraph(yrboxdiet.Text, comboBoxdiet.SelectedIndex.ToString());
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillDiet();
         }
     }
 }
