@@ -88,10 +88,10 @@ namespace FitnessTracker2._0
                     //MessageBox.Show("Successfully SAVED");
                     msgBox msg = new msgBox("Saved Successfully!!!");
                     msg.StartPosition = FormStartPosition.Manual;
-                    msg.Left = 300;
-                    msg.Top = 200;
+                    msg.Left = 1000;
+                    msg.Top = 500;
 
-                   msg.ShowDialog();
+                    msg.ShowDialog();
 
                     listBox1.Items.Add(res + ") " + nameBox.Text);
                     nameBox.Text = ""; cal.Text = "";

@@ -96,10 +96,10 @@ namespace FitnessTracker2._0
             }
             msgBox msg = new msgBox("Updated Successfully");
             msg.StartPosition = FormStartPosition.Manual;
-            msg.Left = 300;
-            msg.Top = 200;
+            msg.Left = 1000;
+            msg.Top = 500;
 
-           msg.ShowDialog();
+            msg.ShowDialog();
 
 
         }
