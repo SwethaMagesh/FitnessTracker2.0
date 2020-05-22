@@ -75,12 +75,13 @@ namespace FitnessTracker2._0
 
 
                 //MessageBox.Show("Please enter all essential details now in Profile section  and set ur goals to get started!!","Fill up details now or later",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                msgBox msg = new msgBox("Account Created Suceessfully. Enter profile details... \n Click Okay to proceed further!!!");
+                msgBox msg = new msgBox("Account Created Suceessfully. Enter profile details");
                 msg.StartPosition = FormStartPosition.Manual;
-                msg.Left = 300;
-                msg.Top = 200;
+              
+                msg.Left = 1000;
+                msg.Top = 500;
 
-               msg.ShowDialog();
+                msg.ShowDialog();
 
 
 

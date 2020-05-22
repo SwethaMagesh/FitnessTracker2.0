@@ -205,9 +205,9 @@ namespace FitnessTracker2._0
                     //MessageBox.Show("Details saved successfully");
                     msgBox msg = new msgBox("Saved Successfully!!!");
                     msg.StartPosition = FormStartPosition.Manual;
-                    msg.Left = 300;
-                    msg.Top = 200;
-                   msg.ShowDialog();
+                    msg.Left = 1000;
+                    msg.Top = 500;
+                    msg.ShowDialog();
 
 
                     listBox1.Items.Add(res + " . " + DietName.Text);

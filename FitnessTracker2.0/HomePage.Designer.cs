@@ -126,7 +126,7 @@
             // 
             // pb
             // 
-            this.pb.Image = global::FitnessTracker2._0.Properties.Resources.welcome;
+            //this.pb.Image = global::FitnessTracker2._0.Properties.Resources.welcome;
             this.pb.Location = new System.Drawing.Point(99, 51);
             this.pb.Name = "pb";
             this.pb.Size = new System.Drawing.Size(155, 101);

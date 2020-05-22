@@ -23,12 +23,14 @@ namespace FitnessTracker2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void msgBox_Load(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }

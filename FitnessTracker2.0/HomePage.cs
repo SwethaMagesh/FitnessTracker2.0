@@ -182,7 +182,7 @@ namespace FitnessTracker2._0
             else
             {
                 pic.Text = "Your goals and how you have met them is helping you being rated as Good, Average or Bad";
-                if ((cb+1500)>ci)
+                if ((cb+500)>ci)
                 {
                     AboutYou.Text = "You are a FITNESS FREAK today";
                     AboutYouPic.Image= (Bitmap)Properties.Resources.ResourceManager.GetObject(list[5]);

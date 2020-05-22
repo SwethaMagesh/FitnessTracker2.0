@@ -93,10 +93,10 @@ namespace FitnessTracker2._0
                 //MessageBox.Show("Updated Successfully");
                 msgBox msg = new msgBox("Updated Successfully!!!");
                 msg.StartPosition = FormStartPosition.Manual;
-                msg.Left = 300;
-                msg.Top = 200;
+                msg.Left = 1000;
+                msg.Top = 500;
 
-               msg.ShowDialog();
+                msg.ShowDialog();
 
                 con1.Close();
                 this.Close();
@@ -230,12 +230,12 @@ namespace FitnessTracker2._0
 
                 //MessageBox.Show("Saved Successfully! Now you re ready to rock!! Please go set the goals ! You can check if our advised goals are sufficient ", "Getting Ready", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                msgBox msg = new msgBox("Profile Created Successfully!!\nSet your Goal and rock!!!!");
+                msgBox msg = new msgBox("Profile Created Successfully!!Set your Goal and rock!!!!");
                 msg.StartPosition = FormStartPosition.Manual;
-                msg.Left = 300;
-                msg.Top = 200;
+                msg.Left = 1000;
+                msg.Top = 500;
 
-               msg.ShowDialog();
+                msg.ShowDialog();
                 this.Close();
                 myparent.openChildForm(new HomePage(myparent, "Set your Goal and track your fitness"));
 
