@@ -234,7 +234,7 @@ namespace FitnessTracker2._0
                 msg.Top = 200;
                 msg.ShowDialog();
                 this.Close();
-                myparent.openChildForm(new HomePage("Set your Goal and track your fitness"));
+                myparent.openChildForm(new HomePage(myparent,"Set your Goal and track your fitness"));
 
 
             }

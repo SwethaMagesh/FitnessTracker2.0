@@ -20,29 +20,28 @@ namespace FitnessTracker2._0
         int  total;
         int uid = 0;
         Form1 myparent;
-        public HomePage(Form1 myp)
+        public HomePage(Form1 myp,string text="")
         {
             this.myparent = myp;
             InitializeComponent();
             FindingUser();
             AddPic();
             QuoteLoader();
-           
+            if(text!="")
+            {
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("icon");
+                popup.TitleText = "Welcome to Odyssey";
+                popup.ContentText = text;
+                popup.Popup();
+
+            }
+            
+
+
 
         }
-        public HomePage(string text)
-        {
-            //this.myparent = myp;
-            //FindingUser();
-            //AddPic();
-            //QuoteLoader();
-            PopupNotifier popup = new PopupNotifier();
-            popup.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("icon");
-            popup.TitleText = "Welcome to Odyssey";
-            popup.ContentText = text;
-            popup.Popup();
-
-        }
+    
 
         private void HomePage_Load(object sender, EventArgs e)
         {
