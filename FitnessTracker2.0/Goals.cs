@@ -186,7 +186,7 @@ namespace FitnessTracker2._0
                 msg.StartPosition = FormStartPosition.Manual;
                 msg.Left = 300;
                 msg.Top = 200;
-                msg.Show();
+                msg.ShowDialog();
                 AddDiet.Enabled = false;
                 condatabase.Close();
                 GoalDiet();
@@ -249,7 +249,7 @@ namespace FitnessTracker2._0
                     msg.StartPosition = FormStartPosition.Manual;
                     msg.Left = 300;
                     msg.Top = 200;
-                    msg.Show();
+                    msg.ShowDialog();
                 }
                 condatabase.Close();
             }
@@ -260,6 +260,11 @@ namespace FitnessTracker2._0
 
 
             // string Query1 = "insert into user(;";
+        }
+
+        private void Goals_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void DietGoal_TextChanged_1(object sender, EventArgs e)

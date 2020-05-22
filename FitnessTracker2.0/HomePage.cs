@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Tulpep.NotificationWindow;
 
 namespace FitnessTracker2._0
 {
@@ -26,7 +27,21 @@ namespace FitnessTracker2._0
             FindingUser();
             AddPic();
             QuoteLoader();
-            
+           
+
+        }
+        public HomePage(string text)
+        {
+            //this.myparent = myp;
+            //FindingUser();
+            //AddPic();
+            //QuoteLoader();
+            PopupNotifier popup = new PopupNotifier();
+            popup.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("icon");
+            popup.TitleText = "Welcome to Odyssey";
+            popup.ContentText = text;
+            popup.Popup();
+
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -222,6 +237,10 @@ namespace FitnessTracker2._0
 
         }
 
+        private void pic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

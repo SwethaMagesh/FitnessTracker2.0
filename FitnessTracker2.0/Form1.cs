@@ -170,5 +170,10 @@ namespace FitnessTracker2._0
             openChildForm(new HomePage(this));
             hidesub();
         }
+
+        private void childpanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

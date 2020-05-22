@@ -95,7 +95,7 @@ namespace FitnessTracker2._0
                 msg.StartPosition = FormStartPosition.Manual;
                 msg.Left = 300;
                 msg.Top = 200;
-                msg.Show();
+                msg.ShowDialog();
                 con1.Close();
                 this.Close();
                 myparent.openChildForm(new HomePage(myparent));
@@ -232,9 +232,9 @@ namespace FitnessTracker2._0
                 msg.StartPosition = FormStartPosition.Manual;
                 msg.Left = 300;
                 msg.Top = 200;
-                msg.Show();
+                msg.ShowDialog();
                 this.Close();
-                myparent.openChildForm(new Goals(myparent));
+                myparent.openChildForm(new HomePage("Set your Goal and track your fitness"));
 
 
             }
