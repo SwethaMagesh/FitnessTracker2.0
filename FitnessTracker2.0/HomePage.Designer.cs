@@ -90,7 +90,7 @@
             // 
             this.AboutYouPic.Location = new System.Drawing.Point(5, 51);
             this.AboutYouPic.Name = "AboutYouPic";
-            this.AboutYouPic.Size = new System.Drawing.Size(145, 70);
+            this.AboutYouPic.Size = new System.Drawing.Size(155, 88);
             this.AboutYouPic.TabIndex = 1;
             this.AboutYouPic.TabStop = false;
             // 
@@ -126,7 +126,7 @@
             // 
             // pb
             // 
-            this.pb.Image = global::FitnessTracker2._0.Properties.Resources.welcome;
+            this.pb.Image = global::FitnessTracker2._0.Properties.Resources.welcomNew;
             this.pb.Location = new System.Drawing.Point(99, 51);
             this.pb.Name = "pb";
             this.pb.Size = new System.Drawing.Size(155, 101);
