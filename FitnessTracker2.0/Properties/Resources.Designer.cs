@@ -173,6 +173,16 @@ namespace FitnessTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap left1 {
+            get {
+                object obj = ResourceManager.GetObject("left1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logout {
             get {
                 object obj = ResourceManager.GetObject("logout", resourceCulture);
@@ -223,9 +233,9 @@ namespace FitnessTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap runlogo {
+        internal static System.Drawing.Bitmap right1 {
             get {
-                object obj = ResourceManager.GetObject("runlogo", resourceCulture);
+                object obj = ResourceManager.GetObject("right1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,16 +286,6 @@ namespace FitnessTracker2._0.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2020_05_21_at_13_10_50 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2020-05-21 at 13.10.50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WhatsApp_Image_2020_05_21_at_19_59_45__5_ {
-            get {
-                object obj = ResourceManager.GetObject("WhatsApp Image 2020-05-21 at 19.59.45 (5)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
