@@ -103,7 +103,7 @@ namespace FitnessTracker2._0
             }
             catch (Exception er)
             {
-                MessageBox.Show(er.Message, "ERROR in DB", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // MessageBox.Show(er.Message, "ERROR in DB", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             con1.Close();
 
