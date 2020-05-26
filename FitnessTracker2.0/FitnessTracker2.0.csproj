@@ -324,19 +324,10 @@
     <None Include="Resources\WhatsApp Image 2020-05-21 at 19.59.45 %285%291.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\WhatsApp Image 2020-05-21 at 19.59.45 %285%292.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\WhatsApp Image 2020-05-21 at 13.10.50.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\left1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\right1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\WhatsApp Image 2020-05-21 at 19.59.45.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bgMarsh.jpeg" />
@@ -346,6 +337,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bgOrange.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actbg.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidef.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

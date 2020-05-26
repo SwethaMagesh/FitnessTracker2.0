@@ -63,6 +63,16 @@ namespace FitnessTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap actbg {
+            get {
+                object obj = ResourceManager.GetObject("actbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bad {
             get {
                 object obj = ResourceManager.GetObject("bad", resourceCulture);
@@ -166,6 +176,16 @@ namespace FitnessTracker2._0.Properties {
         internal static System.Drawing.Bitmap greenLogo {
             get {
                 object obj = ResourceManager.GetObject("greenLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hidef {
+            get {
+                object obj = ResourceManager.GetObject("hidef", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,6 +303,16 @@ namespace FitnessTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap showf {
+            get {
+                object obj = ResourceManager.GetObject("showf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap super {
             get {
                 object obj = ResourceManager.GetObject("super", resourceCulture);
@@ -306,16 +336,6 @@ namespace FitnessTracker2._0.Properties {
         internal static System.Drawing.Bitmap welcomNew {
             get {
                 object obj = ResourceManager.GetObject("welcomNew", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WhatsApp_Image_2020_05_21_at_13_10_50 {
-            get {
-                object obj = ResourceManager.GetObject("WhatsApp Image 2020-05-21 at 13.10.50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

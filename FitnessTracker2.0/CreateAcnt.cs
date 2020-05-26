@@ -152,5 +152,33 @@ namespace FitnessTracker2._0
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // showORHide();
+            if (pwd.UseSystemPasswordChar == true)
+            { pwd.UseSystemPasswordChar = false;
+                button2.BackgroundImage = Properties.Resources.hidef;
+            }
+            else
+            { pwd.UseSystemPasswordChar = true;
+                button2.BackgroundImage = Properties.Resources.showf;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // showORHide();
+            if (newPwd.UseSystemPasswordChar == true)
+            {
+                newPwd.UseSystemPasswordChar = false;
+                button3.BackgroundImage = Properties.Resources.hidef;
+            }
+            else
+            {
+                newPwd.UseSystemPasswordChar = true;
+                button3.BackgroundImage = Properties.Resources.showf;
+            }
+        }
     }
 }
