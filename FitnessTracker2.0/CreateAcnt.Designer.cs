@@ -144,6 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = global::FitnessTracker2._0.Properties.Resources.WhatsApp_Image_2020_05_21_at_13_10_50;
             this.ClientSize = new System.Drawing.Size(1178, 645);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);

@@ -16,7 +16,7 @@ namespace FitnessTracker2._0
         public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection con1 = new MySqlConnection(constr);
         public static string userid;
-        public static double today, thisWeek, thisMonth, allTime;
+        public static double today=0, thisWeek=0, thisMonth=0, allTime=0;
         public ActCum()
         {
             InitializeComponent();
@@ -27,10 +27,41 @@ namespace FitnessTracker2._0
             comboBox1.SelectedIndex = DateTime.Now.Month;
             
         }
+        void findUser()
+        {
+            //find userid
+            if (Program.userName == "")
+            { MessageBox.Show("Please Login to view the report !"); this.Close(); }
 
-        
+            else
+            {
+                string q = "select userid from user where name ='" + Program.userName + "'";
+                try
+                {
+                    con1.Open();
+                    MySqlCommand cmd = new MySqlCommand(q, con1);
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        userid = dr.GetString(0);
+                        Console.WriteLine(userid);
+
+                    }
+
+                }
+                catch (MySqlException er)
+                {
+                    con1.Close();
+                }
+                con1.Close();
+            }
+
+        }
+
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             FillDurGraph(yearBox.Text, comboBox1.SelectedIndex.ToString());
 
         }
@@ -86,38 +117,11 @@ namespace FitnessTracker2._0
             con1.Close();
 
         }
-        void findUser()
-        {
-            //find userid
-            if (Program.userName == "")
-            { MessageBox.Show("Please Login to view the report !"); this.Close(); }
-
-            else
-            {
-                string q = "select userid from user where name ='" + Program.userName + "'";
-                try
-                {
-                    con1.Open();
-                    MySqlCommand cmd = new MySqlCommand(q, con1);
-                    MySqlDataReader dr = cmd.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        userid = dr.GetString(0);
-
-                    }
-
-                }
-                catch (MySqlException er)
-                {
-                    con1.Close();
-                }
-                con1.Close();
-            }
-
-        }
+       
 
         void FillACT()
         {
+            today = 0; thisWeek = 0; thisMonth = 0; allTime = 0;
 
             try
             {
@@ -127,7 +131,7 @@ namespace FitnessTracker2._0
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    today = dr.GetDouble(0);
+                    today =(dr.IsDBNull(0))?0.0:dr.GetDouble(0);
                 }
                 dr.Close();
                 Query = "select avg(dur) from cumdailydur where userid=" + userid + " and datediff(curdate(),adate)<7;";
@@ -135,7 +139,7 @@ namespace FitnessTracker2._0
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    thisWeek = dr.GetDouble(0);
+                    thisWeek = (dr.IsDBNull(0)) ? 0.0 : dr.GetDouble(0);
                 }
                 dr.Close();
 
@@ -144,7 +148,7 @@ namespace FitnessTracker2._0
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    thisMonth = dr.GetDouble(0);
+                    thisMonth = (dr.IsDBNull(0)) ? 0.0 : dr.GetDouble(0);
                 }
                 dr.Close();
 
@@ -153,7 +157,7 @@ namespace FitnessTracker2._0
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    allTime = dr.GetDouble(0);
+                    allTime = (dr.IsDBNull(0)) ? 0.0 : dr.GetDouble(0);
                 }
                 dr.Close();
 
@@ -161,7 +165,7 @@ namespace FitnessTracker2._0
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "ERROR in DB", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(ex.Message, "ERROR in DB", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             con1.Close();
 
