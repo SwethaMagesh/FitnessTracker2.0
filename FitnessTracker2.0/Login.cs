@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Net;
+using System.Net.Mail;
 namespace FitnessTracker2._0
 {
     public partial class Login : Form
@@ -20,8 +22,40 @@ namespace FitnessTracker2._0
             this.myparent = source;
             InitializeComponent();
         }
+        private void MailSent(string email,string pass)
+        {
+            
+            try
+            {
 
-        private void login1_Click(object sender, EventArgs e)
+                MailMessage msg = new MailMessage();
+                msg.From = new MailAddress("thisisourprojectx@gmail.com");
+                msg.To.Add(email);
+                msg.Subject = "RESET the password for ODYSSEY";
+                msg.Body = "You can now reset the password. Your old password was " + pass + "\n Enter your old password to login and you can use the change password facility ";
+
+
+                SmtpClient smt = new SmtpClient();
+                smt.Host = "smtp.gmail.com";
+                System.Net.NetworkCredential ntcd = new NetworkCredential();
+                ntcd.UserName = "thisisourprojectx@gmail.com";
+                ntcd.Password = "piddS1623140714";
+                smt.Credentials = ntcd;
+                smt.EnableSsl = true;
+                smt.Port = 587;
+                smt.Send(msg);
+
+                MessageBox.Show("A Mail is sent to ur registered mailid");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+            private void login1_Click(object sender, EventArgs e)
         {
            
                 try
@@ -76,15 +110,47 @@ namespace FitnessTracker2._0
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             myparent.openChildForm(new CreateAcnt(myparent));
             myparent.hidesub();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            string email = "", pass = "";
+            try
+            {
+                con1.Open();
+                string command = "select password,email from user where name='" + user.Text + "';";
+                MySqlCommand cmd = new MySqlCommand(command, con1);
+                MySqlDataReader dr = cmd.ExecuteReader();
+                if(dr.Read())
+                {
+                    email = dr.GetString(1);
+                    pass = dr.GetString(0);
+                }
+                else
+                {
+                    msgBox msg = new msgBox("No such username, So please try again!!");
+                    msg.StartPosition = FormStartPosition.Manual;
 
+                    msg.Left = 1000;
+                    msg.Top = 500;
+
+                    msg.ShowDialog();
+                }
+
+                MailSent(email, pass);
+
+            }
+            catch(Exception er)
+            {
+                MessageBox.Show(er.Message, "ERROR in sending mail");
+            }
+            con1.Close();
         }
     }
-}
+
+       
+    }

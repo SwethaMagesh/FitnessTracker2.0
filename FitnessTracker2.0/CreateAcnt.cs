@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace FitnessTracker2._0
 {
     public partial class CreateAcnt : Form
     {
+        public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
+        MySqlConnection con1 = new MySqlConnection(constr);
         public static string username = "";
         public static string password = "";
         Form1 myparent;
@@ -70,27 +73,55 @@ namespace FitnessTracker2._0
                 MessageBox.Show("Check the criteria for password; Minimum 1 special character, number and Uppercase alphabet", "Password Validatation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (newPwd.Text != pwd.Text)
                 MessageBox.Show("Re enter password carefully!");
+
             else
             {
+                try
+                {
+                    con1.Open();
+                    string myq = "select * from user where name='" + userName.Text + "'";
+                    MySqlCommand cmd = new MySqlCommand(myq, con1);
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    if(dr.Read())
+                    {
+                        msgBox msg = new msgBox("Username already exists, So please try again!!");
+                        msg.StartPosition = FormStartPosition.Manual;
+
+                        msg.Left = 1000;
+                        msg.Top = 500;
+
+                        msg.ShowDialog();
+                       // return;
+
+                    }
+                    else
+                    {
+                        //MessageBox.Show("Please enter all essential details now in Profile section  and set ur goals to get started!!","Fill up details now or later",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        msgBox msg = new msgBox("Account Created Suceessfully. Enter profile details");
+                        msg.StartPosition = FormStartPosition.Manual;
+
+                        msg.Left = 1000;
+                        msg.Top = 500;
+
+                        msg.ShowDialog();
 
 
-                //MessageBox.Show("Please enter all essential details now in Profile section  and set ur goals to get started!!","Fill up details now or later",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                msgBox msg = new msgBox("Account Created Suceessfully. Enter profile details");
-                msg.StartPosition = FormStartPosition.Manual;
-              
-                msg.Left = 1000;
-                msg.Top = 500;
 
-                msg.ShowDialog();
+                        username = userName.Text;
+                        password = pwd.Text;
+                        Program.userName = username;
+                        this.Close();
+                        myparent.openChildForm(new UserPage(myparent));
+                        myparent.toggleNav();
+                    }
+
+                }catch(Exception er)
+                {
+
+                }
 
 
-
-                username = userName.Text;
-                password = pwd.Text;
-                Program.userName = username;
-                this.Close();
-                myparent.openChildForm(new UserPage(myparent));
-                myparent.toggleNav();
+               
              
 
 
