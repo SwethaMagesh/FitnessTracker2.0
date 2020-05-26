@@ -89,8 +89,13 @@ namespace FitnessTracker2._0
 
         private void ForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            myparent.openChildForm(new ForgotPassword());
+            myparent.openChildForm(new ForgotPassword(myparent));
             myparent.hidesub();
+        }
+
+        private void user_TextChanged(object sender, EventArgs e)
+        {
+            Program.userName = user.Text;
         }
     }
 }

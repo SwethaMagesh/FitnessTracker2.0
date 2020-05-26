@@ -74,6 +74,7 @@
             this.newPwd.Name = "newPwd";
             this.newPwd.Size = new System.Drawing.Size(154, 35);
             this.newPwd.TabIndex = 14;
+            this.newPwd.UseSystemPasswordChar = true;
             // 
             // pwd
             // 
@@ -85,6 +86,7 @@
             this.pwd.TabIndex = 13;
             this.toolTip1.SetToolTip(this.pwd, "Minimum 6 characters,***Password must contain minimum of one number, special char" +
         "acter and uppercase letter");
+            this.pwd.UseSystemPasswordChar = true;
             // 
             // userName
             // 

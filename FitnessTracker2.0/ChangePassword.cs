@@ -80,7 +80,7 @@ namespace FitnessTracker2._0
         private void UpdatePWD_Click(object sender, EventArgs e)
         {
             string pass = string.Empty;
-            //condatabase.Open();
+            condatabase.Open();
             string Query = "select * from user where Userid=" + uid + ";";
             MySqlCommand cmd = new MySqlCommand(Query, condatabase);
             MySqlDataReader myReader = cmd.ExecuteReader();

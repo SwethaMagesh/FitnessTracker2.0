@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Tulpep.NotificationWindow;
 
 namespace FitnessTracker2._0
 {
@@ -113,6 +114,14 @@ namespace FitnessTracker2._0
                         this.Close();
                         myparent.openChildForm(new UserPage(myparent));
                         myparent.toggleNav();
+                        {
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("icon");
+                            popup.TitleText = "Set up Profile";
+                            popup.ContentText = "Please fill in profile details... Only after successful saving of profile, your account is usable ";
+                            popup.Popup();
+
+                        }
                     }
 
                 }catch(Exception er)

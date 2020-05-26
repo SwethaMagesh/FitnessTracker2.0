@@ -173,7 +173,7 @@ namespace FitnessTracker2._0
         {
             this.Close();
             myparent.openChildForm(new ChangePassword());
-            myparent.toggleNav();
+           // myparent.toggleNav();
         }
 
         public int findUID()

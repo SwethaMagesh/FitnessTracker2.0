@@ -12,6 +12,7 @@ using System.Configuration;
 using System.Net.Mail;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
+using Tulpep.NotificationWindow;
 
 namespace FitnessTracker2._0
 {
@@ -21,15 +22,17 @@ namespace FitnessTracker2._0
         public static string constr1 = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection condatabase = new MySqlConnection(constr1);
         Form1 myparent;
-        public ForgotPassword()
+        public ForgotPassword(Form1 source)
         {
+            this.myparent = source;
             InitializeComponent();
+            Usertxt.Text = Program.userName;
+            LblText.Text = "";
+            
+            
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void SendMail_Click(object sender, EventArgs e)
         {
@@ -47,6 +50,7 @@ namespace FitnessTracker2._0
                 {
                     Mail = myReader.GetString("Email");
                     password = myReader.GetString("Password");
+                    username = Usertxt.Text;
                 }
                 if(Mail!="")
                 {
@@ -55,16 +59,14 @@ namespace FitnessTracker2._0
                         MailMessage mm = new MailMessage();
                         mm.From = new MailAddress("odysseyfitnesstracker@gmail.com");
                         mm.Subject = "Password Recovery";
-                        mm.Body = string.Format("Hii{0},<br/><br/>Your Password is {1}.<br/><br/>Thank You.", username, password);
+                        mm.Body = string.Format("Hello {0},<br/><br/>Your current Password is {1}. You can now login to Odyssey! Have a great day.<br/><br/>Your fitness tracker, <br/> Odyssey", username, password);
                         mm.IsBodyHtml = true;
                         mm.To.Add(new MailAddress(Mail));
                         SmtpClient smtp = new SmtpClient();
                         smtp.Host = "smtp.gmail.com";
                         smtp.UseDefaultCredentials = false;
 
-                        // NetworkCredential NetworkCred = new NetworkCredential();
-                        //NetworkCred.UserName = "odysseyfitnesstracker@gmail.com";
-                        //NetworkCred.Password = "odyssey@123";
+                        
 
                         smtp.Credentials = new System.Net.NetworkCredential("odysseyfitnesstracker@gmail.com", "odyssey@123");
                         smtp.Port = 587;
@@ -72,13 +74,17 @@ namespace FitnessTracker2._0
                         smtp.Send(mm);
                         LblText.ForeColor = Color.Green;
                         LblText.Text = "Password has been sent to your registered email address";
+                        {
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("icon");
+                            popup.TitleText = "Password recovery";
+                            popup.ContentText = "Check out your inbox. You have a recovery mail sent to "+ Mail;
+                            popup.Popup();
+
+                        }
 
                     }
-                    else
-                    {
-                        LblText.ForeColor = Color.Red;
-                        LblText.Text = "This email address does not match our records";
-                    }
+                   
 
                 }
                 else
@@ -103,8 +109,7 @@ namespace FitnessTracker2._0
         private void GoLogin_Click(object sender, EventArgs e)
         {
             this.Close();
-            Login lo = new Login(myparent);
-            myparent.openChildForm(lo);
+            myparent.openChildForm(new Login(myparent));
         }
     }
 }

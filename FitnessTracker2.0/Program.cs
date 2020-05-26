@@ -8,7 +8,7 @@ namespace FitnessTracker2._0
 {
     static class Program
     {
-        public static string userName = "Swe";
+        public static string userName = "";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

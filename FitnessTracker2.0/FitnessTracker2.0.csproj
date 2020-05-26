@@ -335,5 +335,17 @@
   <ItemGroup>
     <None Include="Resources\right1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2020-05-21 at 19.59.45.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMarsh.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgOrange.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
