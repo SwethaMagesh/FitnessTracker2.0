@@ -158,6 +158,8 @@ namespace FitnessTracker2._0
                     {
                         Updatenew.Enabled = false;
                         Updatenew.Visible = false;
+                        ChangePWD.Enabled = false;
+                        ChangePWD.Visible = false;
                     }
                 }
                 catch (MySqlException er)
@@ -167,7 +169,12 @@ namespace FitnessTracker2._0
 
         }
 
-       
+        private void ChangePWD_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            myparent.openChildForm(new ChangePassword());
+            myparent.toggleNav();
+        }
 
         public int findUID()
         {
